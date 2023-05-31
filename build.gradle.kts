@@ -1,7 +1,6 @@
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-	application
 	id("org.springframework.boot") version "2.5.9"
 	id("io.spring.dependency-management") version "1.0.11.RELEASE"
 	kotlin("jvm") version "1.5.32"
@@ -32,10 +31,6 @@ dependencies {
 
 tasks.withType<Test> {
 	useJUnitPlatform()
-}
-
-application {
-	mainClass.set("io.paketo.demo.DemoApplication")
 }
 
 tasks.withType<KotlinCompile> {
